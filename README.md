@@ -1,6 +1,6 @@
 # Instalytics - Instagram Analytics Dashboard
 
-Welcome to **Instalytics**, a cutting-edge Instagram analytics tool designed to deliver real-time insights into user profiles. This hackathon project leverages **AI-powered OSINT (Open-Source Intelligence)** to collect and analyze public Instagram data, creating structured profiles and visualizing trends like follower growth and engagement. The intuitive **React-based frontend**, styled with **Tailwind CSS**, offers a clean, Instagram-inspired interface, while the **FastAPI backend** ensures efficient data processing.
+Welcome to **Instalytics**, a cutting-edge Instagram analytics tool designed to deliver real-time insights into user profiles. This project leverages **AI-powered OSINT (Open-Source Intelligence)** to collect and analyze public Instagram data, creating structured profiles and visualizing trends like follower growth and engagement. The intuitive **React-based frontend**, styled with **Tailwind CSS**, offers a clean, while the **FastAPI backend** ensures efficient data processing.
 
 ---
 
