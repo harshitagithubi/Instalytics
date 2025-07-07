@@ -5,16 +5,29 @@ function AnalyticsForm() {
   const [username, setUsername] = useState('');
   const [data, setData] = useState(null);
 
-  const handleSubmit = async (e) => {
-    e.preventDefault();
-    try {
-      const response = await axios.post('http://localhost:8000/api/analytics', { username });
-      setData(response.data);
-    } catch (error) {
-      console.error('Error fetching data:', error);
-    }
-  };
+  const [loading, setLoading] = useState(false);
 
+const handleSubmit = async (e) => {
+  e.preventDefault();
+  setLoading(true);
+  try {
+    const response = await axios.post('http://localhost:8000/api/analytics', { username });
+    setData(response.data);
+  } catch (error) {
+    console.error('Error fetching data:', error);
+  } finally {
+    setLoading(false);
+  }
+};
+
+
+<button 
+  type="submit" 
+  className="bg-blue-500 text-white p-2"
+  disabled={loading}
+>
+  {loading ? 'Analyzing...' : 'Analyze'}
+</button>
   return (
     <div className="p-6">
       <h2 className="text-xl font-semibold mb-4">Instagram Analytics Input</h2>
